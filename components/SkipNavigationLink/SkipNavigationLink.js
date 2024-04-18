@@ -1,13 +1,12 @@
-import classNames from 'classnames/bind';
 import * as SELECTORS from '../../constants/selectors';
-import styles from './SkipNavigationLink.module.scss';
-
-let cx = classNames.bind(styles);
+import { cn } from '../../libs/cn';
+import styles from './SkipNavigationLink.module.css';
+cn
 
 export default function SkipNavigationLink() {
   return (
     <a
-      className={cx(['component', 'sr-only'])}
+      className={cn('component', 'sr-only')}
       href={`#${SELECTORS.MAIN_CONTENT_ID}`}
     >
       Skip To Main Content

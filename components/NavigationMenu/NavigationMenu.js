@@ -1,12 +1,9 @@
-import classNames from 'classnames/bind';
 import { gql } from '@apollo/client';
 import Link from 'next/link';
-import styles from './NavigationMenu.module.scss';
-import stylesFromWP from './NavigationMenuClassesFromWP.module.scss';
+import styles from './NavigationMenu.module.css';
+import stylesFromWP from './NavigationMenuClassesFromWP.module.css';
 import { flatListToHierarchical } from '@faustwp/core';
-
-let cx = classNames.bind(styles);
-let cxFromWp = classNames.bind(stylesFromWP);
+import { cn } from '../../libs/cn';
 
 export default function NavigationMenu({ menuItems, className }) {
   if (!menuItems) {
@@ -18,7 +15,7 @@ export default function NavigationMenu({ menuItems, className }) {
 
   function renderMenu(items) {
     return (
-      <ul className={cx('menu')}>
+      <ul className={cn('menu')}>
         {items.map((item) => {
           const { id, path, label, children, cssClasses } = item;
 
@@ -28,7 +25,7 @@ export default function NavigationMenu({ menuItems, className }) {
           }
 
           return (
-            <li key={id} className={cxFromWp(cssClasses)}>
+            <li key={id} className={cn(cssClasses)}>
               <Link href={path ?? ''}>{label ?? ''}</Link>
               {children.length ? renderMenu(children) : null}
             </li>
@@ -40,7 +37,7 @@ export default function NavigationMenu({ menuItems, className }) {
 
   return (
     <nav
-      className={cx(['component', className])}
+      className={cn('component', className)}
       role="navigation"
       aria-label={`${menuItems[0]?.menu?.node?.name} menu`}>
       {renderMenu(hierarchicalMenuItems)}

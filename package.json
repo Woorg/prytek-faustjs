@@ -10,23 +10,35 @@
     "start": "faust start"
   },
   "dependencies": {
-    "@apollo/client": "^3.6.6",
+    "@apollo/client": "^3.9.11",
     "@faustwp/cli": "^3.0.1",
     "@faustwp/core": "^3.0.1",
-    "@wordpress/base-styles": "^4.36.0",
-    "@wordpress/block-library": "^7.19.0",
-    "classnames": "^2.3.1",
-    "graphql": "^16.6.0",
-    "next": "^12.1.6",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "sass": "^1.54.9"
+    "@wordpress/base-styles": "^4.46.0",
+    "@wordpress/block-library": "^8.32.0",
+    "graphql": "^16.8.1",
+    "next": "^14.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "next-secure-headers": "^2.2.0"
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "@tailwindcss/typography": "^0.5.12",
+    "autoprefixer": "^10.4.19",
+    "clsx": "^2.1.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^14.2.2",
+    "next-secure-headers": "^2.2.0",
+    "postcss": "^8.4.38",
+    "postcss-mixins": "^10.0.0",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^9.5.6",
+    "postcss-simple-vars": "^7.0.1",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "tailwind-merge": "^2.2.2",
+    "tailwindcss": "^3.4.3"
   },
   "engines": {
-    "node": ">=18",
+    "node": ">=20",
     "npm": ">=8"
   }
 }

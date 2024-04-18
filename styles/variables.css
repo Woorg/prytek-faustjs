@@ -1,0 +1,33 @@
+:root {
+	--mulish: var(--font-mulish);
+}
+
+/* Default */
+
+$color-default-black: #000000;
+$color-default-black-80: rgba(0, 0, 0, 0.8);
+
+$color-default-white: #ffffff;
+$color-default-white-15: rgba(255, 255, 255, 0.15);
+$color-transparent: rgba(255, 255, 255, 0);
+
+/* Project palette
+ для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482 */
+
+$color-dark-gray: #a7a7a7;
+$color-pigment-green: #00a550;
+
+
+/* Typography
+ --------------------------------- */
+
+/* переменная используемая в html для подключения скейлинга */
+$fz-default: 16px;
+
+/* у некоторых шрифтов в ios возникают проблемы с символом рубля */
+/* https://www.artlebedev.ru/kovodstvo/sections/159/#13 */
+$ff-rouble: 'Rouble', 'Arial', sans-serif;
+
+/* $ff-inter: 'Inter', 'Arial', sans-serif; */
+$ff-mulish: 'Mulish', 'Arial', sans-serif;
+

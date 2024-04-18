@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import classNames from 'classnames/bind';
 import Link from 'next/link';
 import { Container, NavigationMenu, SkipNavigationLink } from '../../components';
-import styles from './Header.module.scss';
+import styles from './Header.module.css';
+import { cn } from '../../libs/cn';
 
-let cx = classNames.bind(styles);
 
 export default function Header({
   title = 'Headless by WP Engine',
@@ -14,32 +13,36 @@ export default function Header({
   const [isNavShown, setIsNavShown] = useState(false);
 
   return (
-    <header className={cx('component')}>
+    <header className={cn('component')}>
+
       <SkipNavigationLink />
         <Container>
-          <div className={cx('navbar')}>
-            <div className={cx('brand')}>
+          <div className={cn('navbar')}>
+            <div className={cn('brand')}>
               <Link href="/">
-                <a className={cx('title')}>{title}</a>
+                <span className={cn('title')}>{title}</span>
               </Link>
-              {description && <p className={cx('description')}>{description}</p>}
+              {description && <p className={cn('description')}>{description}</p>}
             </div>
             <button
               type="button"
-              className={cx('nav-toggle')}
+              className={cn('nav-toggle')}
               onClick={() => setIsNavShown(!isNavShown)}
               aria-label="Toggle navigation"
-              aria-controls={cx('primary-navigation')}
+              aria-controls={cn('primary-navigation')}
               aria-expanded={isNavShown}
             >
               ☰
             </button>
             <NavigationMenu
-              className={cx(['primary-navigation', isNavShown ? 'show' : undefined])}
+              className={cn('primary-navigation', isNavShown ? 'show' : undefined)}
               menuItems={menuItems}
             />
         </div>
       </Container>
+
+
+
     </header>
   );
 }

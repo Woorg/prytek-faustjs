@@ -1,0 +1,7 @@
+.container {
+	@screen lg {
+	}
+
+	@screen 2xl {
+	}
+}

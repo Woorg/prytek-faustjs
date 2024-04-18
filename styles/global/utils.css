@@ -1,0 +1,33 @@
+:root {
+}
+
+@layer components {
+	.btn {
+		@apply inline-flex cursor-pointer items-center justify-center rounded-full bg-gray px-8 py-3 font-extrabold uppercase tracking-widest text-lightGray transition-all hover:opacity-90;
+	}
+
+	.title {
+		@apply text-[55px] font-extrabold leading-[1.1] text-lightGray lg:text-[55px];
+	}
+
+	.title_h2 {
+		@apply text-[59px] leading-[1.1] text-white lg:text-[85px];
+	}
+
+	.title_h3 {
+		@apply text-[24px] leading-[1.4] text-white lg:text-[34px];
+	}
+
+	.text {
+		@apply text-xl font-normal text-softGray lg:text-2xl;
+	}
+	.title-gradient {
+		@apply bg-contactsTitleMod text-[63px] font-extrabold leading-none tracking-tighter lg:bg-contactsTitle lg:text-[208px] lg:tracking-tight;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.container-full {
+		@apply relative z-0 px-[34px] xl:px-[100px];
+	}
+}

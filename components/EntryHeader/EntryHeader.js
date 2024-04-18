@@ -1,18 +1,16 @@
-import className from 'classnames/bind';
 import { Heading, PostInfo, Container, FeaturedImage } from '../../components';
-import styles from './EntryHeader.module.scss';
-
-let cx = className.bind(styles);
+import { cn } from '../../libs/cn';
+import styles from './EntryHeader.module.css';
 
 export default function EntryHeader({ title, image, date, author, className }) {
   const hasText = title || date || author;
 
   return (
-    <div className={cx(['component', className])}>
+    <div className={cn('component', className)}>
       {image && (
         <FeaturedImage
           image={image}
-          className={cx('image')}
+          className={cn('image')}
           priority
         />
       )}

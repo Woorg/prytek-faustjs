@@ -1,15 +1,13 @@
 import React from 'react';
-import className from 'classnames/bind';
 import { Heading } from '../../components';
-import styles from './Hero.module.scss';
-
-let cx = className.bind(styles);
+import styles from './Hero.module.css';
+import { cn } from '../../libs/cn';
 
 export default function Hero({ title, level = 'h2', children, className }) {
   return (
-    <div className={cx(['component', className])}>
+    <div className={cn('component', className)}>
       <Heading level={level}>
-        <span className={cx('title')}>{title}</span>
+        <span className={cn('title')}>{title}</span>
       </Heading>
       {children}
     </div>
